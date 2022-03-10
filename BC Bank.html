@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <title>BC bank</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+   
+</head>
+
+<body>
+    
+    <form>
+        <h1>Welcome to BC Bank</h1>
+    
+        <div>
+                    <label>Email</label></div>
+                    <input type="email" name="email" id="email" placeholder="seu@email.com" onchange="onChangeEmail()"/>
+                    <div class="error" id="email-required-error" >Email is required</div>
+                    
+        <div>
+                    <div><label>Senha</label></div>
+                    <input type="password" name="password" id="password" placeholder="Senha" onchange="onChangePassword()">
+                    <div class="error" id="password-required-error">Senha is required</div>
+        </div>
+        <div>
+            <button type="button" class="clear" id="recuperar-senha" disabled="true">Recuperar senha</button>
+        </div>
+        <div>
+            <button type="button" class="solid" id="login-button" disabled="true" onclick="login()">Entrar</button>
+        </div>
+        
+    </form>
+    <footer>
+        <img src="favicon-32x32.png" alt="logo do banco">
+        <p class="copyright">&copy;BC Bank 2022</p>
+    </footer>
+</body>
+
+<link rel="stylesheet" href="index.css">
+<script src="index.js"></script>
+<script src="validations.js"></script>
+<script src="loading.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/9.6.8/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.8/firebase-auth-compat.js"></script>
+<script>
+    const firebaseConfig = {
+    apiKey: "AIzaSyB9DoAR0-JKBE6rs8iHsYhAjJmAnDAx590",
+    authDomain: "bc-bank-bfa8c.firebaseapp.com",
+    projectId: "bc-bank-bfa8c",
+    storageBucket: "bc-bank-bfa8c.appspot.com",
+    messagingSenderId: "813281202190",
+    appId: "1:813281202190:web:cdcd17281357a30ffeec5f"
+  };
+  firebase.initializeApp(firebaseConfig);
+</script>
+    
+</html>
